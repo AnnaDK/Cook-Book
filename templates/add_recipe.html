@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3>Add Recipe</h3>
+
+<div class="row">
+  <form action="" method="POST" class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">eco</i>
+        <select>
+          <option value="" disabled selected>Choose a category</option>
+          <option value="1">Fruit</option>
+          <option value="2">Green</option>
+          <option value="3">Protein</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">star</i>
+        <textarea
+          id="recipe_name"
+          name="recipe_name"
+          class="materialize-textarea validate"
+        ></textarea>
+        <label for="recipe_name">Recipe Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">filter_vintage</i>
+        <textarea
+          id="ingredients"
+          name="ingredients"
+          class="materialize-textarea validate"
+        ></textarea>
+        <label for="ingredients">Ingredients</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">spa</i>
+        <textarea
+          id="instruction"
+          name="instruction"
+          class="materialize-textarea validate"
+        ></textarea>
+        <label for="instruction">Preparation</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <div class="file-field input-field" id="recipe_image">
+          <div class="btn">
+            <span>File</span>
+            <input type="file" />
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
