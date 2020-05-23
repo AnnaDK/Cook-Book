@@ -3,15 +3,15 @@
 <h3>Add Recipe</h3>
 
 <div class="row">
-  <form action="" method="POST" class="col s12">
+  <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons prefix">eco</i>
-        <select>
+        <select id="category" name="category_name">
           <option value="" disabled selected>Choose a category</option>
-          <option value="1">Fruit</option>
-          <option value="2">Green</option>
-          <option value="3">Protein</option>
+          {% for cat in categories %}
+          <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+          {% endfor %}
         </select>
       </div>
     </div>
@@ -50,17 +50,21 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <div class="file-field input-field" id="recipe_image">
-          <div class="btn">
-            <span>File</span>
-            <input type="file" />
-          </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" />
-          </div>
-        </div>
+        <i class="material-icons prefix">spa</i>
+        <textarea
+          id="recipe_image"
+          name="recipe_image"
+          class="materialize-textarea validate"
+        ></textarea>
+        <label for="instruction">Link for image</label>
       </div>
+    
     </div>
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">
+      Add Recipe
+      <i class="material-icons right">send</i>
+    </button>
   </form>
 </div>
 
