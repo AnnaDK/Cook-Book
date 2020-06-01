@@ -2,16 +2,16 @@
  
 <div class="row">
  {% for recipe in recipes %}
-<<<<<<< HEAD
   <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
   
     <div class="card text-white bg-dark mb-3" >
   <img src="{{recipe.recipe_image}}" class="card-img-top" alt="smoothie image">
   <div class="card-body">
    <h5 class="card-title">{{recipe.recipe_name}}</h5>
-    <span>{{recipe.category_name}}</span>
-  </div>
+   <span>{{recipe.category_name}}</span>
+   </div>
   <ul class="list-group accordion list-group-flush" id="accordionList">
+ 
     <li class="list-group-item" id="headingOne">
     <h5 class="mb-0">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ingredients{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListOne">
@@ -21,50 +21,6 @@
       <div id="ingredients{{ recipe._id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionList">
       <div class="card-body">
         <span>{{recipe.ingredients}}</span>
-=======
-  <div class="col s4">
-    <div class="card blue-grey darken-1 card">
-      <div class="card-content white-text">
-        <img class="responsive-img" src="{{recipe.recipe_image}}" />
-      </div>
-      <div class="card-action blue-grey darken-1">
-        <ul class="collapsible white-text">
-          <li>
-            <div class="collapsible-header blue-grey darken-1">
-              <i class="material-icons">star</i>
-              {{recipe.recipe_name}}
-            </div>
-            <div class="collapsible-body">
-              <span>{{recipe.category_name}}</span>
-            </div>
-          </li>
-
-          <li>
-            <div class="collapsible-header blue-grey darken-1">
-              <i class="material-icons">filter_vintage</i>Ingredients
-            </div>
-            <div class="collapsible-body">
-              <span>{{recipe.ingredients}}</span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header blue-grey darken-1">
-              <i class="material-icons">spa</i>Preparation
-            </div>
-            <div class="collapsible-body">
-              <span>{{recipe.instruction}}</span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header blue-grey darken-1">
-              <i class="material-icons">check</i>Source
-            </div>
-            <div class="collapsible-body">
-              <a href="{{recipe.source}}"><span>Recipe found here!</span></a>
-            </div>
-          </li>
-        </ul>
->>>>>>> ef86f656053a28fe19cd8d8bdd5c5a1ca33d0de7
       </div>
     </div>
       </li>
@@ -85,9 +41,22 @@
       </h5>
       <div id="source{{ recipe._id }}" class="collapse" aria-labelledby="#headingThree" data-parent="#accordionList">
       <div class="card-body">
-        <a href="{{recipe.source}}" class="card-link">Recipe found here!</a>
+        <a href="{{recipe.source}}" class="card-link" target="_blank">Recipe found here!</a>
       </div>
     </div></li>
+     <li class="list-group-item" id="headingFour">
+    <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#modify{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListFour">
+          Modify
+        </button>
+      </h5>
+      <div id="modify{{ recipe._id }}" class="collapse" aria-labelledby="headingFour" data-parent="#accordionList">
+      <div class="card-body">
+          <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="mr-3">Edit </a>
+    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"  >Delete </a>
+      </div>
+    </div>
+      </li>
   </ul>
   
 </div>
