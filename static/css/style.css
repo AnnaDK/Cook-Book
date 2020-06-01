@@ -8,10 +8,23 @@ Mermaid Colours Color Palette
 #00945c	(0,148,92)
 #00a950 (0,169,80)
 */
+body{
+ background-image: url("../images/Vintage_illustrations_blur.jpg");
+ background-repeat : no-repeat;
+background-size : cover;
+background-position : center center;
+background-color: transparent;
+background-attachment : fixed;
+}
 .container{
     width: 90%;
-    
+   
 }
+
+
+
+    
+
 .navbar-brand{
     font-size: 40px;
     font-weight: 600;
@@ -33,11 +46,12 @@ Mermaid Colours Color Palette
     margin-top: 10px;
     
 }
-.list-group, .list-group-item{
+.list-group, .list-group-item, .card-link{
     background-color:#546e7a!important; 
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     }
+
 
 /*Solution for the sizing images in card-img-top found on https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width*/
 .card-img-top {
@@ -51,11 +65,34 @@ Mermaid Colours Color Palette
   background-size: cover;
 }
 
+.btn-link{
+    font-family: 'Source Sans Pro', sans-serif;
+    color:#fff;
+    text-decoration: none !important;
+}
 
 
-
-
-
+.btn-link:hover {
+    color:#ffed1f!important;
+    text-decoration: none !important;
+}
+.card-link:hover {
+    color:#ffed1f!important;
+    text-decoration: none !important;
+}
+ a {
+      color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+     text-decoration: none !important;
+     } 
+a:hover {
+    color:#ffed1f!important;
+    text-decoration: none !important;
+}
+ .add_recipe_container{
+     background-color: #fff;
+ }   
+     
 @media (max-width: 575.98px) { 
     .card-img-top {
     height: 70vw;

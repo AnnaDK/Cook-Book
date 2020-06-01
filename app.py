@@ -35,6 +35,16 @@ def insert_recipe():
     return redirect(url_for('get_recipes'))
 
 
+@app.route('/edit_recipe')
+def edit_recipe():
+    return render_template("edit_recipe.html", categories=mongo.db.categories.find())
+
+
+@app.route('/delete_recipe')
+def delete_recipe():
+    return render_template("delete_recipe.html", categories=mongo.db.categories.find())
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
