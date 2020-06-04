@@ -12,19 +12,7 @@ background-color: transparent;
 background-attachment : fixed;
 }
 .container{
-    width: 90%;body{
- background-image: url("../images/fruit_background_blur.jpg");
- background-repeat : no-repeat;
-background-size : cover;
-background-position : center center;
-background-color: transparent;
-background-attachment : fixed;
-}
-.container{
     width: 90%;
-   
-}
-
    
 }
 
