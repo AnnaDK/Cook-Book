@@ -7,60 +7,42 @@
     <div class="card text-white bg-dark mb-3" >
   <img src="{{recipe.recipe_image}}" class="card-img-top" alt="smoothie image">
   <div class="card-body">
+  
    <h5 class="card-title">{{recipe.recipe_name}}</h5>
    <span>{{recipe.category_name}}</span>
-   </div>
-  <ul class="list-group accordion list-group-flush" id="accordionList">
- 
-    <li class="list-group-item" id="headingOne">
-    <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ingredients{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListOne">
-          Ingredients
-        </button>
-      </h5>
-      <div id="ingredients{{ recipe._id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionList">
-      <div class="card-body">
-        <span>{{recipe.ingredients}}</span>
-      </div>
-    </div>
-      </li>
-    <li class="list-group-item" id="headingTwo"><h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#preparation{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListTwo">
-          Preparation
-        </button>
-      </h5>
-      <div id="preparation{{ recipe._id }}" class="collapse" aria-labelledby="#headingTwo" data-parent="#accordionList">
-      <div class="card-body">
-        <span>{{recipe.instruction}}</span>
-      </div>
-    </div></li>
-    <li class="list-group-item" id="headingThree"><h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#source{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListThree">
-          Source
-        </button>
-      </h5>
-      <div id="source{{ recipe._id }}" class="collapse" aria-labelledby="#headingThree" data-parent="#accordionList">
-      <div class="card-body">
-        <a href="{{recipe.source}}" class="card-link" target="_blank">Recipe found here!</a>
-      </div>
-    </div></li>
-     <li class="list-group-item" id="headingFour">
-    <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#modify{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListFour">
-          Modify
-        </button>
-      </h5>
-      <div id="modify{{ recipe._id }}" class="collapse" aria-labelledby="headingFour" data-parent="#accordionList">
-      <div class="card-body">
-          <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="mr-3">Edit </a>
-    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"  >Delete </a>
-      </div>
-    </div>
-      </li>
-  </ul>
-  
-</div>
   </div>
+   <div class="accordion" id="accordionList">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#recipe{{ recipe._id }}" aria-expanded="false" aria-controls="collapseListOne">
+   <i class="fas fa-chevron-down"></i>
+   </button>
+      </h5>
+    </div>
+   
+  
+ <div id="recipe{{ recipe._id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionList">
+      <div class="card-body">
+    
+      
+      
+      <h5 class="card-title">Ingredients</h5>
+        <span>{{recipe.ingredients}}</span><hr>
+        <h5 class="card-title">Preparation</h5>
+        <span>{{recipe.instruction}}</span><hr>
+        <h5 class="card-title">Source</h5>
+        <a href="{{recipe.source}}" class="card-link" target="_blank">Recipe found here!</a><hr>
+        <button type="button" class="btn btn-primary btn-sm btn-block"><a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="mr-3">Edit Recipe </a></button>
+    <button type="button" class="btn btn-primary btn-sm btn-block"><a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"  >Delete Recipe </a></button>
+      </div>
+    </div>
+  </div>
+   </div>
+  
+  
+</div></div>
+  
   {% endfor %}
 </div>
  {% endblock %}
