@@ -1,14 +1,16 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, flash, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
+app.secret_key = 'key_secret'
+
 
 app.config["MONGO_DBNAME"] = 'cookbook'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-u1lvc.mongodb.net/cookbook?retryWrites=true&w=majorit'
-
+app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-u1lvc.mongodb.net/cookbook?retryWrites=true&w=majority'
+                           
 mongo = PyMongo(app)
 
 
@@ -30,18 +32,26 @@ def add_recipes():
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
-    recipes = mongo.db.recipes
-    recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipes'))
+    """Creating a recipe and adding it into recipe collection"""
+    
+    if request.method == "POST":
+        recipes = mongo.db.recipes
+        recipes.insert_one(request.form.to_dict())
+    
+        flash("Thank you for adding a recipe!")
+        
+        return render_template("add_recipe.html", categories=mongo.db.categories.find())
 
 
 @app.route('/edit_recipe')
 def edit_recipe():
+    """Allow users to edit recipes"""
     return render_template("edit_recipe.html", categories=mongo.db.categories.find())
 
 
 @app.route('/delete_recipe')
 def delete_recipe():
+    """Allow users to delete recipes"""
     return render_template("delete_recipe.html", categories=mongo.db.categories.find())
 
 
