@@ -50,6 +50,21 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=the_recipe, categories=all_categories)
 
 
+@app.route('/update_recipe/<recipe_id>', methods=['POST'])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update({'_id': ObjectId(recipe_id)},
+    {   
+        'recipe_name': request.form.get('recipe_name'),
+        'category_name': request.form.get('category_name'),
+        'ingredients': request.form.get('ingredients'),
+        'instruction': request.form.get('instruction'),
+        'recipe_image': request.form.get('recipe_image'),
+        'source': request.form.get('source')
+    })
+    return redirect(url_for('get_recipes'))
+
+
 @app.route('/delete_recipe')
 def delete_recipe():
     """Allow users to delete recipes"""
