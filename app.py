@@ -43,10 +43,11 @@ def insert_recipe():
         return render_template("add_recipe.html", categories=mongo.db.categories.find())
 
 
-@app.route('/edit_recipe')
-def edit_recipe():
-    """Allow users to edit recipes"""
-    return render_template("edit_recipe.html", categories=mongo.db.categories.find())
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template("edit_recipe.html", recipe=the_recipe, categories=all_categories)
 
 
 @app.route('/delete_recipe')
