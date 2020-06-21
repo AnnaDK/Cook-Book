@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
- <div class="row">
+
+  <div class="row">
  <div class="col-12">
  <div class="list-group list-group-horizontal mt-3">
   <a href="{{url_for('fruit_smoothies')}}" class="list-group-item list-group-item-action">Fruit Smoothies</a>
@@ -12,7 +13,7 @@
 <div class="row">
  {% for recipe in recipes %}
 
- 
+ {% if recipe.category_name == "Fruit smoothie" %}
   <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
   
     <div class="card text-white bg-dark mb-3" >
@@ -70,9 +71,10 @@
     </div>
   </div>
 </div>
-  
+  {% endif %}
   {% endfor %}
 </div>
 
 
  {% endblock %}
+

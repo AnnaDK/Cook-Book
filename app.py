@@ -22,12 +22,29 @@ def find_recipes():
 
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=mongo.db.recipes.find(), categories=mongo.db.categories.find())
 
 
 @app.route('/add_recipes')
 def add_recipes():
     return render_template("add_recipe.html", categories=mongo.db.categories.find())
+
+
+
+@app.route('/fruit_smoothies')
+def fruit_smoothies():
+    return render_template("fruit_smoothies.html", recipes=mongo.db.recipes.find())
+
+
+@app.route('/green_smoothies')
+def green_smoothies():
+    return render_template("green_smoothies.html", recipes=mongo.db.recipes.find())
+
+
+@app.route('/protein_smoothies')
+def protein_smoothies():
+    return render_template("protein_smoothies.html", recipes=mongo.db.recipes.find())
+
 
 
 @app.route('/insert_recipe', methods=['POST'])
