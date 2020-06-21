@@ -15,35 +15,35 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/find_recipes')
-def find_recipes():
-    return render_template("index.html", recipes=mongo.db.recipes.find())
+@app.route('/index')
+def index():
+    return render_template("index.html", title="Home", recipes=mongo.db.recipes.find())
 
 
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find(), categories=mongo.db.categories.find())
+    return render_template("recipes.html", title="Recipes", recipes=mongo.db.recipes.find())
 
 
 @app.route('/add_recipes')
 def add_recipes():
-    return render_template("add_recipe.html", categories=mongo.db.categories.find())
+    return render_template("add_recipe.html", title="Add Recipe", categories=mongo.db.categories.find())
 
 
 
 @app.route('/fruit_smoothies')
 def fruit_smoothies():
-    return render_template("fruit_smoothies.html", recipes=mongo.db.recipes.find())
+    return render_template("fruit_smoothies.html", title="Fruit Smoothies", recipes=mongo.db.recipes.find())
 
 
 @app.route('/green_smoothies')
 def green_smoothies():
-    return render_template("green_smoothies.html", recipes=mongo.db.recipes.find())
+    return render_template("green_smoothies.html", title="Green Smoothies", recipes=mongo.db.recipes.find())
 
 
 @app.route('/protein_smoothies')
 def protein_smoothies():
-    return render_template("protein_smoothies.html", recipes=mongo.db.recipes.find())
+    return render_template("protein_smoothies.html", title="Protein Smoothies", recipes=mongo.db.recipes.find())
 
 
 
@@ -64,7 +64,7 @@ def insert_recipe():
 def edit_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
-    return render_template("edit_recipe.html", recipe=the_recipe, categories=all_categories)
+    return render_template("edit_recipe.html", title="Edit Recipe", recipe=the_recipe, categories=all_categories)
 
 
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
