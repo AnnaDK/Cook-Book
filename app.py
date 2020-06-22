@@ -46,6 +46,10 @@ def protein_smoothies():
     return render_template("protein_smoothies.html", title="Protein Smoothies", recipes=mongo.db.recipes.find())
 
 
+@app.route('/blenders')
+def blenders():
+    return render_template("blenders.html", title="Blenders", recipes=mongo.db.recipes.find())
+
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():

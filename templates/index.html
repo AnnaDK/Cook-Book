@@ -1,11 +1,25 @@
 {% extends 'base.html' %} {% block content %}
  
- <nav class="navbar navbar-light bg-light">
- <span class="navbar-text">Find a recipe</span>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Type an ingredient" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
+<div class="card mb-3">
+<div class="card-body">
+    <h2 class="card-title">Welcome to our smoothies collecion !/h2>
+    
+    <p class="card-text">You can look through our recipes <a href="{{url_for('get_recipes')}}">collection</a>.<br/>
+Add a new <a href="{{url_for('add_recipes')}}">recipe</a><br/>
+Choose your new <a href="{{url_for('blenders')}}">blender</a></p>
+  </div>
+  <img src="static/images/smoothies-healthy-img.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">Why drink juices and smoothies?</h3>
+    <p class="card-text">The WHO recommends 400g of fruit and vegetable per day.* <br/>
+     
+1.7 million people's lives could be saved each year by eating more fruit and vegetables
+Fruit and vegetables are an integral part of a balanced diet.* <br/>
+ 
+Homemade juices with fresh ingredients can contain up to 90%** of the nutrients in fruits and vegetables</p>
+    <p class="card-text"><small class="text-muted">*<a class="text-muted" href="https://www.who.int/dietphysicalactivity/fruit/en/"> https://www.who.int </a>  accessed: 14/08/2019 <br/>
+** Internal tests on grapes, watermelon, tomato, apple, orange, strawberry and pineapple extracting, ranging from 69% to 92% depending on fruit.</small></p>
+  </div>
+</div>
 
  {% endblock %}
