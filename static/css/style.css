@@ -34,10 +34,7 @@ background-attachment : fixed;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 25px;
 }
-.active {
-    font-size: 30px;
-    color: #fff;
-}
+
 
 .card{
     background-color:#546e7a!important; 
@@ -47,7 +44,7 @@ background-attachment : fixed;
     
 }
 .list-group, .list-group-item, .card-link{
-    background-color:#546e7a!important; 
+    background-color:#546e7a; 
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     }
@@ -60,15 +57,11 @@ background-attachment : fixed;
     object-fit: cover;
 }
 
-.jumbotron {
-  background-image:url("");
-  background-size: cover;
-}
 
 .btn-link{
     font-family: 'Source Sans Pro', sans-serif;
     color:#fff;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 
