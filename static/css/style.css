@@ -43,13 +43,15 @@ background-attachment : fixed;
     margin-top: 10px;
     
 }
-.list-group, .list-group-item, .card-link{
+.list-group, .list-group-item, .card-link, .new_blenders{
     background-color:#546e7a; 
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     }
 
-
+.list-group-item-action:hover{
+    background-color: #8799a1!important;
+}
 /*Solution for the sizing images in card-img-top found on https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width*/
 .card-img-top {
     width: 100%;
@@ -85,7 +87,21 @@ a:hover {
  .add_recipe_container{
      background-color: #fff;
  }   
-     
+  .active {
+      background-color: #8799a1!important;
+  }
+  .footer{
+      font-size: 20px;
+      font-weight: 200;
+      color:#fff;
+  }   
+  .text-muted{
+      color:#cbd3d7!important;
+  }
+  h3{
+      padding-top: 2px;
+  }
+  
 @media (max-width: 575.98px) { 
     .card-img-top {
     height: 70vw;

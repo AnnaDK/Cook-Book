@@ -30,7 +30,6 @@ def add_recipes():
     return render_template("add_recipe.html", title="Add Recipe", categories=mongo.db.categories.find())
 
 
-
 @app.route('/fruit_smoothies')
 def fruit_smoothies():
     return render_template("fruit_smoothies.html", title="Fruit Smoothies", recipes=mongo.db.recipes.find())
@@ -48,7 +47,7 @@ def protein_smoothies():
 
 @app.route('/blenders')
 def blenders():
-    return render_template("blenders.html", title="Blenders", recipes=mongo.db.recipes.find())
+    return render_template("blenders.html", title="Blenders", blenders=mongo.db.blenders.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -91,7 +90,6 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
     
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
