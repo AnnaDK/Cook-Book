@@ -2,4 +2,4 @@
 
 Welcome ,
 
-[Cookbook link]()
+[Cookbook link](https://smoothie-cookbook.herokuapp.com/)
