@@ -3,11 +3,12 @@
 <h3>Add Recipe</h3>
 <div class="row">
 <div class="col-12">
+
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 <ul class="messages">
 {% for message in messages %}
-<li>{{ message }}</li>
+<li class = "thank_you_message bg-success text-white p-2">{{ message }}</li>
 {% endfor %}
 </ul>
 {% endif %}

@@ -101,7 +101,14 @@ a:hover {
   h3{
       padding-top: 2px;
   }
-  
+  li{
+       list-style-type: none;
+  }
+  .thank_you_message{
+   
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 35px;
+  }
 @media (max-width: 575.98px) { 
     .card-img-top {
     height: 70vw;
