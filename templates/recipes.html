@@ -3,9 +3,9 @@
 	<div class="col-12">
 		<div class="list-group list-group-horizontal mt-3">
 			<a href="{{url_for('get_recipes')}}" class="list-group-item list-group-item-action active">All </a>
-			<a href="{{url_for('get_recipes')}}" class="list-group-item list-group-item-action">Fruit </a>
-			<a href="{{url_for('get_recipes')}}" class="list-group-item list-group-item-action ">Green </a>
-			<a href="{{url_for('get_recipes')}}" class="list-group-item list-group-item-action ">Protein </a>
+			<a href="{{url_for('fruit_smoothies')}}" class="list-group-item list-group-item-action">Fruit </a>
+			<a href="{{url_for('green_smoothies')}}" class="list-group-item list-group-item-action ">Green </a>
+			<a href="{{url_for('protein_smoothies')}}" class="list-group-item list-group-item-action ">Protein </a>
 		</div>
 
 	</div>
@@ -80,6 +80,31 @@
 
 	{% endfor %}
 </div>
+<div>
+<nav aria-label="Recipes">
+            
+             <ul class="pagination pagination-md justify-content-center">
+              {% for pagenum in pages %}
+                    {% if pagenum == page %} 
+             
+            
+                    
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">
+        {{ pagenum }}
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    {% else %}
+    <li class="page-item"><a class="page-link" href="{{ url_for('get_recipes', page=pagenum) }}">{{ pagenum }}</a></li>
+    
+    
+               
+    {% endif %}
+                {% endfor %}
+  </ul>
+        </nav>
+    </div>
 
 
 {% endblock %}

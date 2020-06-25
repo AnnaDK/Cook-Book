@@ -1,4 +1,5 @@
 import os
+import math
 from flask import Flask, render_template, redirect, request, flash, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -22,7 +23,12 @@ def index():
 
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", title="Recipes", recipes=all_recipes)
+    per_page = 8
+    page = int(request.args.get('page', 1))
+    total = mongo.db.recipes.count_documents({})
+    all_recipes = mongo.db.recipes.find().skip((page - 1) * per_page).limit(per_page)
+    pages = range(1, int(math.ceil(total / per_page)) + 1)
+    return render_template("recipes.html", title="Recipes", recipes=all_recipes, page=page, pages=pages, total=total)
 
 
 @app.route('/add_recipes')
