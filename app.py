@@ -22,7 +22,7 @@ def index():
 
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", title="Recipes", recipes=mongo.db.recipes.find())
+    return render_template("recipes.html", title="Recipes", recipes=all_recipes)
 
 
 @app.route('/add_recipes')
@@ -32,17 +32,20 @@ def add_recipes():
 
 @app.route('/fruit_smoothies')
 def fruit_smoothies():
-    return render_template("fruit_smoothies.html", title="Fruit Smoothies", recipes=mongo.db.recipes.find())
+    recipes = mongo.db.recipes.find({'category_name': 'Fruit smoothie'})
+    return render_template("recipes.html", title="Fruit Smoothies", recipes=recipes)
 
 
 @app.route('/green_smoothies')
 def green_smoothies():
-    return render_template("green_smoothies.html", title="Green Smoothies", recipes=mongo.db.recipes.find())
+    recipes = mongo.db.recipes.find({'category_name': 'Green smoothie'})
+    return render_template("recipes.html", title="Green Smoothies", recipes=recipes)
 
 
 @app.route('/protein_smoothies')
 def protein_smoothies():
-    return render_template("protein_smoothies.html", title="Protein Smoothies", recipes=mongo.db.recipes.find())
+    recipes = mongo.db.recipes.find({'category_name': 'Protein smoothie'})
+    return render_template("recipes.html", title="Protein Smoothies", recipes=recipes)
 
 
 @app.route('/blenders')
@@ -73,8 +76,7 @@ def edit_recipe(recipe_id):
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
-    recipes.update({'_id': ObjectId(recipe_id)},
-    {   
+    recipes.update({'_id': ObjectId(recipe_id)}, {   
         'recipe_name': request.form.get('recipe_name'),
         'category_name': request.form.get('category_name'),
         'ingredients': request.form.get('ingredients'),
