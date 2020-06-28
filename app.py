@@ -38,20 +38,32 @@ def add_recipes():
 
 @app.route('/fruit_smoothies')
 def fruit_smoothies():
-    recipes = mongo.db.recipes.find({'category_name': 'Fruit smoothie'})
-    return render_template("recipes.html", title="Fruit Smoothies", recipes=recipes)
+    per_page = 8
+    page = int(request.args.get('page', 1))
+    total = mongo.db.recipes.count_documents({})
+    recipes = mongo.db.recipes.find({'category_name': 'Fruit smoothie'}).skip((page - 1) * per_page).limit(per_page)
+    pages = range(1, int(math.ceil(total / per_page)) + 1)
+    return render_template("recipes.html", title="Fruit Smoothies", recipes=recipes, page=page, pages=pages, total=total)
 
 
 @app.route('/green_smoothies')
 def green_smoothies():
-    recipes = mongo.db.recipes.find({'category_name': 'Green smoothie'})
-    return render_template("recipes.html", title="Green Smoothies", recipes=recipes)
+    per_page = 8
+    page = int(request.args.get('page', 1))
+    total = mongo.db.recipes.count_documents({})
+    recipes = mongo.db.recipes.find({'category_name': 'Green smoothie'}).skip((page - 1) * per_page).limit(per_page)
+    pages = range(1, int(math.ceil(total / per_page)) + 1)
+    return render_template("recipes.html", title="Green Smoothies", recipes=recipes, page=page, pages=pages, total=total)
 
 
 @app.route('/protein_smoothies')
 def protein_smoothies():
-    recipes = mongo.db.recipes.find({'category_name': 'Protein smoothie'})
-    return render_template("recipes.html", title="Protein Smoothies", recipes=recipes)
+    per_page = 8
+    page = int(request.args.get('page', 1))
+    total = mongo.db.recipes.count_documents({})
+    recipes = mongo.db.recipes.find({'category_name': 'Protein smoothie'}).skip((page - 1) * per_page).limit(per_page)
+    pages = range(1, int(math.ceil(total / per_page)) + 1)
+    return render_template("recipes.html", title="Protein Smoothies", recipes=recipes, page=page, pages=pages, total=total)
 
 
 @app.route('/blenders')
