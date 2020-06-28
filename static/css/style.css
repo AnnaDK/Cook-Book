@@ -78,6 +78,14 @@ a:hover {
   color: #5df614 !important;
   text-decoration: none !important;
 }
+a { 
+  position: relative;
+}
+a:active {
+  top: 1px;
+  color: #5df614 !important;
+}
+
 .add_recipe_container {
   background-color: #fff;
 }
