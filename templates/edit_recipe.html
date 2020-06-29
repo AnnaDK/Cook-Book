@@ -1,64 +1,61 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container add_recipe_container  mt-3 mb-3">
-	<h3>Edit Recipe</h3>
-	<div class="row">
-		<div class="col-12">
+<div class="container add_recipe_container mt-3 mb-3">
+  <h3>Edit Recipe</h3>
+  <div class="row">
+    <div class="col-12">
+      <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col-12">
+        <div class="form-group">
+          <label for="recipe_name">Recipe name</label>
+          <input type="text" class="form-control" id="recipe_name" name="recipe_name" maxlength="30"
+            required value="{{recipe.recipe_name}}"/>
+        </div>
 
-			<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col-12">
-				<div class="form-group">
-					<label for="recipe_name">Recipe name</label>
-					<input type="text" class="form-control" id="recipe_name"
-          name="recipe_name"  maxlength="30" required value = "{{recipe.recipe_name}}">
+        <div class="form-group">
+          <label for="category_name">Category</label>
+          <select class="form-control" id="category" name="category_name" required >
+            <option value="" disabled selected>Choose Category</option>
+            {% for cat in categories %} {% if cat.category_name == recipe.category_name %}
+            <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
+            {% else %}
+            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+            {% endif %} {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ingredients">Ingredients</label>
+          <textarea class="form-control" id="ingredients" name="ingredients" rows="5" required >
+          {{recipe.ingredients}}</textarea>
+        </div>
+        <div class="form-group">
+          <label for="instruction">Preparation</label>
+          <textarea class="form-control" id="instruction" name="instruction" rows="5" required >
+        {{recipe.instruction}}</textarea >
+        </div>
+        <div class="form-group">
+          <label for="recipe_image">Image Link</label>
+          <textarea class="form-control" id="recipe_image" name="recipe_image" rows="5" required >
+        {{recipe.recipe_image}}</textarea>
+        </div>
+        <div class="form-group">
+          <label for="source">Source Link </label>
+          <small id="passwordHelpInline" class="text-muted">
+            Not required
+          </small>
+          <textarea class="form-control" id="source" name="source" rows="5">
+          {{recipe.source}}</textarea>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <button type="submit" value="Submit" class="btn btn-success btn-lg btn-block btn-link mb-3">
+              Save
+            </button>
+            <a role="button" class="btn btn-warning btn-lg btn-block mb-3"
+              href="{{url_for('get_recipes')}}" >Cancel</a >
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-
-					<div class="form-group ">
-						<label for="category_name">Category</label>
-						<select class="form-control" id="category" name="category_name"  required>
-      <option value="" disabled selected>Choose Category</option>
-     {% for cat in categories %}
-         {% if cat.category_name == recipe.category_name %}
-         <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
-         {% else %}
-         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-         {% endif %}
-     {% endfor %}
-      
-      </select>
-					</div>
-					<div class="form-group">
-						<label for="ingredients">Ingredients</label>
-						<textarea class="form-control" id="ingredients"
-          name="ingredients"  rows="5" required >{{recipe.ingredients}}</textarea>
-					</div>
-					<div class="form-group">
-						<label for="instruction">Preparation</label>
-						<textarea class="form-control" id="instruction"
-          name="instruction"  rows="5" required >{{recipe.instruction}}</textarea>
-					</div>
-					<div class="form-group">
-						<label for="recipe_image">Image Link</label>
-						<textarea class="form-control"  id="recipe_image"
-          name="recipe_image" rows="5" required >{{recipe.recipe_image}}</textarea>
-					</div>
-					<div class="form-group">
-						<label for="source">Source Link </label> <small id="passwordHelpInline" class="text-muted">
-      Not required
-    </small>
-						<textarea class="form-control" id="source"
-          name="source"  rows="5" >{{recipe.source}}</textarea>
-					</div>
-					<div class="row">
-						<div class="col-sm-3">
-							<button type="submit" value="Submit" class="btn btn-success btn-lg btn-block btn-link mb-3 ">Save</button>
-							<a role="button" class="btn btn-warning btn-lg btn-block mb-3"
-								href="{{url_for('get_recipes')}}">Cancel</a>
-
-						</div>
-					</div>
-
-			</form>
-		</div>
-	</div>
 </div>
 
 {% endblock %}
