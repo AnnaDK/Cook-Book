@@ -6,7 +6,7 @@
       <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col-12">
         <div class="form-group">
           <label for="recipe_name">Recipe name</label>
-          <input type="text" class="form-control" id="recipe_name" name="recipe_name" maxlength="30"
+          <input type="text" class="form-control" id="recipe_name" name="recipe_name" maxlength="17"
             required value="{{recipe.recipe_name}}"/>
         </div>
 
@@ -45,7 +45,7 @@
           {{recipe.source}}</textarea>
         </div>
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <button type="submit" value="Submit" class="btn btn-success btn-lg btn-block btn-link mb-3">
               Save
             </button>

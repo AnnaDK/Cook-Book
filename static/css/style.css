@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap");
 /*
 font-family: 'Source Sans Pro', sans-serif;
-Mermaid Colours Color Palette
-#004749	(0,71,73)
-#00535a	(0,83,90)
-#00746b	(0,116,107)
-#00945c	(0,148,92)
-#00a950 (0,169,80)
 */
 body {
   background-image: url("../images/fruit_background_blur.jpg");
@@ -87,8 +81,7 @@ a {
 }
 a:active {
   top: 1px;
-  
-}
+  }
 
 .add_recipe_container {
   background-color: #fff;
@@ -132,6 +125,6 @@ li {
 
 @media (max-width: 767.98px) {
   .card-img-top {
-    height: 50vw;
+    height: 30vw;
   }
 }
