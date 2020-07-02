@@ -20,8 +20,6 @@
 - **[User Goals](#user-goals)**
 - **[Site Owner's Goals](#site-owner's-goals)**
 - **[Developer Goals](#developer-goals)**
-- **[User Stories](#user-stories)**
-- **[Website Design](#web-site-design)**
 - **[Wireframes](#wireframes)**
 
 ## 2. [Features](#features)
@@ -198,7 +196,7 @@ This project used HTML, CSS, Python, JS programming languages.
   The project uses Flask as web framework
 - **[MongoDB](https://mongodb.com/)** <br/>
   The project uses MongoDB as database for this project.
-- \*\*[PyMongo](#)
+- **[PyMongo](#)**
   PyMongo to make connection between Python and MongoDB.
 - **[Balsamiq](https://balsamiq.com/)** <br/>
   The project uses Balsamiqo to build wireframes in the planning stage of development.
@@ -217,7 +215,7 @@ This project used HTML, CSS, Python, JS programming languages.
 - **[Google Chrome - Dev Tools]()**<br/>
   The project used Google Chrome Dev Tools to debug code. Check responsiveness.
 - **[Favicon generator](https://favicon.io/)**<br/>
-  The project uses Favicon generator to create a puzzle favicon
+  The project uses Favicon generator to create a favicon
 - **[Google](https://www.google.com)**<br/>
   Recipes for the project were found by using Google search.
 - **[Color Hex Color Codes](https://www.color-hex.com/)**<br/>
