@@ -45,31 +45,31 @@
 - To build a MongoDB-backed Flask project.
 - To build a project with 'CRUD' functionality.
 - Deploy the project to Heroku.
-- To build a useful, userfriendly, attractive webpage with collection of healthy recipes.
+- To build a useful, userfriendly, attractive webpage with a collection of healthy recipes.
 
 ### [User goals](#user-goals)
 
 - Friendly interface
 - Intuitive navigation
-- Attractive design which will motivate to try recipes
+- The attractive design which will motivate to try recipes
 - Comfortable representation of recipes and access to each
 - Ability to choice categories of recipes
-- Ability to find, share, store edit and delete recipes.
+- Ability to find, share, store edit, and delete recipes.
 
 "Blend It" met these goals: <br>
-Based on feedback from users.
+ Based on feedback from users.
 
 - "Home" page giving clear information about the website.
-- Easy to navigate through the website. The navigation bar represent a list of pages.
+- Easy to navigate through the website. The navigation bar represents a list of pages.
 - Easy to open and read information about each recipe. Also possible to open a few recipes at the same time and compare list ingredients or methods.
 - Recipes split into three most popular categories of smoothies. Very comfortable and easy to switch between categories.
-- Functionality of adding, editing, and deleting recipe has easy access and made in a simple and understandable manner.
+- The functionality of adding, editing, and deleting recipes has easy access and made in a simple and understandable manner.
 
 ### [Site Owner's goals](#site-owner's-goals)
 
 - Promote a brand of cooking tools.
 
-"Blend It" met these goals:
+  "Blend It" met these goals:
 
 - Website share a collection of blenders. Collection include: image, specifications and straight link to the web-shop.
 
@@ -77,7 +77,7 @@ Based on feedback from users.
 
 - Create a website that allows users to store and easily access cooking recipes.
 - Create a representation of each recipe with different fields: recipe image, name of recipe, category, ingredients, instruction, link to the source where the recipe was found.
-- Create forms to allow users to add, edit and delete recipes.
+- Create forms to allow users to add, edit, and delete recipes.
 - Provide results in a manner that is visually appealing and user friendly.
 - Create a search by a category of recipes.
 
@@ -125,7 +125,7 @@ All elements responding on mouse click or finger touch on mobile devices.
 
   Name of the recipe.<br>
   Ingredients: list of ingredients for the current recipe.<br>
-  Category: one of three existing.<br>
+  Category: one of three existing on the website.<br>
   Instruction.<br>
   Source: link to the website where the recipe was found. (not required)<br>
   'Edit' button opens a form where a user can edit a recipe.<br>
@@ -139,7 +139,7 @@ All elements responding on mouse click or finger touch on mobile devices.
 "Add Recipe" form<br>
 Allows user to create own recipe.<br>
 Fields which required: <br>
-recipe name, category, ingredients, preparation, image link. <br>
+      recipe name, category, ingredients, preparation, image link. <br>
 Fields which are not required:<br>
 sourse link.<br>
 Buttons 'Submit' and 'Cancel'<br>
@@ -178,8 +178,8 @@ Each card has an image, blender details and link to the web-shop.
 ### [Features Left to Implement](#features-left-to-implement)
 
 - Add an authorization. Create a registration form.
-  Make permition only for registered users add, edit or delete recipes.
-  (Was not in requirements from CI for current project )
+  Make permition only for registered users: add, edit or delete recipes.
+  (Was not in requirements from CI for the current project )
 
 - Create a search by ingredients.
   If collection or recipes will grow the search can help users to find what they need faster.
@@ -310,21 +310,23 @@ Website functionality:
       To keep very first open, users have to open it again as soon as other recipes open.
 
     - **Solution:** <br>
-
+     No, fail to appear in the dev tool. Couldn't find any solution to solve this bug.
+     
 2)  **Categories of recipes flashing white :**
 
     **Problem** <br>
     Categories of recipes flashing white, if to fast keep switching between them very fast.
 
     - **Solution:** <br>
-
+    
     No special solution found. It happens only if switch to fast. What users did by checking the functionality of the website.
 
 # Real-Time Testing.
 
 Asked my friends and family to check the website on their devices.
-Go through the collection of recipes, open/close recipe cards. Despite many times. Press all buttons.
+Go through the collection of recipes, open/close recipe cards. Repeat many times. Press all buttons.
 Move through the navigation bar menu back and forward. Resize screen. Use forms to add/edit the recipe. Delete recipe.
+
 **Feed back**.
 
 The website was checked on different mobile devices and desktops.
@@ -334,22 +336,22 @@ Everything working apart from problems which were in the description above.
 
 ## [Deployment](#deployment)
 
-Website was codded on GitPod.
+The website was codded on GtPod.
 
 - Open account on GitHub.
-- Create project repository using the CI full template..
-- Use Gitpod extension to open a working-space.
+- Create a project repository using the CI full template.
+- Use the Gitpod extension to open a working-space.
 - Commits were done through Gitpod.
 
 **To deploy the project, the following method was used.**
 Log in on Heroku.<br>
 Create a new app on the Heroku website by clicking the "New" button in your dashboard.<br>
 Give it a name "smoothie-cookbook" and set Europe as region.<br>
-In working space create requirements.txt. and procfile <br>
+In working space create requirements.txt. and Procfile <br>
 Git add and git commit requirements and Procfile and then git push the project to GitHub.<br>
 In Heroku specify IP and port.<br>
-On the heroku dashboard click our app, click on "Deploy" followed by "Deployment method" and select GitHub.<br>
-Confirm the linking of the heroku app to the correct GitHub repository.<br>
+On the Heroku dashboard click our app, click on "Deploy" followed by "Deployment method" and select GitHub.<br>
+Confirm the linking of the Heroku app to the correct GitHub repository.<br>
 Click on "Settings" "Reveal Config Vars"<br>
 Set config vars:<br>
 DEBUG FALSE <br>
@@ -358,7 +360,7 @@ MONGO_URI mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<
 PORT 8080<br>
 SECRET_KEY <your_secret_key><br>
 MONGO_URI [documentation](https://docs.atlas.mongodb.com/)<br>
-Click "Deploy" in the heroku dashboard<br>
+Click "Deploy" in the Heroku dashboard<br>
 Master branch must be selected in the "Manual Deployment" <br>
 Click "Deploy Branch".
 
@@ -369,12 +371,15 @@ Click "Deploy Branch".
 - Project idea and design were created by the developer
 
 - The HTML and CSS code was written by the developer
-  Code taken from Bootstrap or other sorses - marked by comments
+  Code taken from Bootstrap or other sorses - marked by comments.
+
+- Code Institute lessons from " Data-Centric Development" and "Practical Python" modules were used as the main reference in the process of creating this project.
+
 
 **Special thanks to:**
 
-Code Institute Mentor Spencer Barriball for his help this project and support.
-Code Institute Tutor support
+Code Institute Mentor Spencer Barriball for his help in this project and support.
+Code Institute Tutor Xavier
 Code Institute Slack Community for the shared experience.
 
 ## [Disclaimer](#disclamer)
