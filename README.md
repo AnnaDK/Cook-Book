@@ -192,12 +192,14 @@ Each card has an image, blender details and link to the web-shop.
 
 ## [Technologies Used](#technologies-used)
 
-This project used HTML, CSS, Python, JS as coding languages.
+This project used HTML, CSS, Python, JS programming languages.
 
 - **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**
   The project uses Flask as web framework
 - **[MongoDB](https://mongodb.com/)** <br/>
-  The project uses MongoDB as database for recipes collection.
+  The project uses MongoDB as database for this project.
+- \*\*[PyMongo](#)
+  PyMongo to make connection between Python and MongoDB.
 - **[Balsamiq](https://balsamiq.com/)** <br/>
   The project uses Balsamiqo to build wireframes in the planning stage of development.
 - **[GitPod](https://www.gitpod.io/)** <br/>
@@ -297,7 +299,7 @@ Website functionality:
 - All buttons are working
 - A modal window is working
 
-------------------------------------------------------------------------
+---
 
 # Problems discovered
 
@@ -330,10 +332,37 @@ Move through the navigation bar menu back and forward. Resize screen. Use forms 
 The website was checked on different mobile devices and desktops.
 Everything working apart from problems which were in the description above.
 
-
 ---
 
 ## [Deployment](#deployment)
+
+Website was codded on GitPod.
+
+- Open account on GitHub.
+- Create project repository using the CI full template..
+- Use Gitpod extension to open a working-space.
+- Commits were done through Gitpod.
+
+**To deploy the project, the following method was used.**
+Log in on Heroku.<br>
+Create a new app on the Heroku website by clicking the "New" button in your dashboard.<br>
+Give it a name "smoothie-cookbook" and set Europe as region.<br>
+In working space create requirements.txt. and procfile <br>
+Git add and git commit requirements and Procfile and then git push the project to GitHub.<br>
+In Heroku specify IP and port.<br>
+On the heroku dashboard click our app, click on "Deploy" followed by "Deployment method" and select GitHub.<br>
+Confirm the linking of the heroku app to the correct GitHub repository.<br>
+Click on "Settings" "Reveal Config Vars"<br>
+Set config vars:<br>
+DEBUG FALSE <br>
+IP 0.0.0.0 <br>
+MONGO_URI mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority<br>
+PORT 8080<br>
+SECRET_KEY <your_secret_key><br>
+MONGO_URI [documentation](https://docs.atlas.mongodb.com/)<br>
+Click "Deploy" in the heroku dashboard<br>
+Master branch must be selected in the "Manual Deployment" <br>
+Click "Deploy Branch".
 
 ## [Acknowledgments](#acknowledgments)
 
@@ -346,7 +375,7 @@ Everything working apart from problems which were in the description above.
 
 **Special thanks to:**
 
-Code Institute Mentor Spencer Barriball for his help and support.
+Code Institute Mentor Spencer Barriball for his help this project and support.
 Code Institute Tutor support
 Code Institute Slack Community for the shared experience.
 
