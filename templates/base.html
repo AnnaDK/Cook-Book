@@ -24,6 +24,7 @@
   </head>
 
   <body>
+  <!--Bootstrap navigation bar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="{{url_for('index')}}">Blend It</a>
 
@@ -66,11 +67,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script >
+    //information and code how to make group-list active found at https://stackoverflow.com/questions/18600031/changing-the-active-class-of-a-link-with-the-twitter-bootstrap-css-in-python-fla
       $(document).ready(function () {
         $("#{{request.endpoint}}").addClass("active");
       });
     </script>
 
-    <!--information and code how to make group-list active found at https://stackoverflow.com/questions/18600031/changing-the-active-class-of-a-link-with-the-twitter-bootstrap-css-in-python-fla-->
+    
   </body>
 </html>

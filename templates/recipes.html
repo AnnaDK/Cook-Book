@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row">
   <div class="col-12">
+  <!--Code for 'list-group','card','accordion' taken from Bootstrap. Changed and adjusted for this project-->
     <div class="list-group list-group-horizontal mt-3">
       <a id="get_recipes" href="{{url_for('get_recipes')}}" class="list-group-item list-group-item-action" >All
       </a>
@@ -55,7 +56,8 @@
       </div>
     </div>
   </div>
-  <!-- Modal -->
+  <!-- Modal from Bootstrap-->
+
   <div class="modal fade" id="modal{{ recipe._id }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -79,6 +81,7 @@
   {% endfor %}
 </div>
 <div>
+<!--Code for 'pagination' taken from Bootstrap-->
   <nav aria-label="Recipes">
     <ul class="pagination pagination-md justify-content-center">
       {% for pagenum in pages %} {% if pagenum == page %}
