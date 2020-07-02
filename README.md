@@ -164,7 +164,6 @@ Each card has an image, blender details and link to the web-shop.
   
   #### Mobile devices display
 
-  
   <p align="center">
   <img width="150"  m-5 height="" src="static/images/images_for_readme/">
    <img width="150" pl-2 height="" src="static/images/images_for_readme/">
@@ -172,85 +171,185 @@ Each card has an image, blender details and link to the web-shop.
    <img width="150" p-2 height="" src="static/images/images_for_readme/">
  </p>
    
-#### Tablet display 
+#### Tablet display
 
   <p align="center">
   <img width="200" height="" src="static/images/images_for_readme/">
   </p>
 
+### [Features Left to Implement](#features-left-to-implement)
 
-  ### [Features Left to Implement](#features-left-to-implement)
+- Add an authorization. Create a registration form.
+  Make permition only for registered users add, edit or delete recipes.
+  (Was not in requirements from CI for current project )
 
-  * Add an authorization. Create a registration form.
-    Make permition only for registered users add, edit or delete recipes.
-    (Was not in requirements from CI for current project )
-  
-  * Create a search by ingredients. 
-    If collection or recipes will grow the search can help users to find what they need faster.
+- Create a search by ingredients.
+  If collection or recipes will grow the search can help users to find what they need faster.
 
-  * Add extra list element in Recipe card called "Recommended blender" Create a feature which will add a link to a recommended for this recipe blender, from an existing database
+- Add extra list element in Recipe card called "Recommended blender" Create a feature which will add a link to a recommended for this recipe blender, from an existing database
 
-  
+---
 
-  ------------------------------------------------------------------------
+## [Technologies Used](#technologies-used)
 
- ## [Technologies Used](#technologies-used)
+This project used HTML, CSS, Python, JS as coding languages.
 
-  This project used HTML, CSS, Python, JS as coding languages.
-  * **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**
-    The project uses Flask as web framework
-  * **[MongoDB](https://mongodb.com/)** <br/>
-   The project uses MongoDB as database for recipes collection.
-  * **[Balsamiq](https://balsamiq.com/)** <br/>
-   The project uses Balsamiqo to build wireframes in the planning stage of development.
-  * **[GitPod](https://www.gitpod.io/)** <br/>
-   The project uses GitPod to build the website.
-  * **[JQuery](https://jquery.com/)**<br/>
-   The project uses JQuery as JS library to make HTML document traversal and manipulative
-  * **[Bootstrap](https://getbootstrap.com/)**<br/>
-   The project uses the Bootstrap framework to help create some elements 
-  * **[FontAwesome](https://fontawesome.com/)**<br/>
-   The project uses FonAwesome to use an icons from the library.
-  * **[Google Fonts](https://fonts.google.com/)**<br/>
-   The project uses Google fonts to style the website fonts.
-  * **[GitHub](https://github.com/)**<br/>
-   To store and share all project code remotely.
-  * **[Browserstack](https://www.browserstack.com/)**<br/>
-   The project used Browserstack to test functionality on all browsers and devices.
-  * **[Google Chrome - Dev Tools]()**<br/>
-   The project used Google Chrome Dev Tools to debug code. Check responsiveness.
-  * **[Favicon generator](https://favicon.io/)**<br/>
-   The project uses Favicon generator to create a puzzle favicon
-  * **[Google](https://www.google.com)**<br/>
-    Recipes for the project were found by using Google search.
-  * **[Color Hex Color Codes](https://www.color-hex.com/)**<br/>
-   To chooise colors and take a code for the project
-  
+- **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**
+  The project uses Flask as web framework
+- **[MongoDB](https://mongodb.com/)** <br/>
+  The project uses MongoDB as database for recipes collection.
+- **[Balsamiq](https://balsamiq.com/)** <br/>
+  The project uses Balsamiqo to build wireframes in the planning stage of development.
+- **[GitPod](https://www.gitpod.io/)** <br/>
+  The project uses GitPod to build the website.
+- **[JQuery](https://jquery.com/)**<br/>
+  The project uses JQuery as JS library to make HTML document traversal and manipulative
+- **[Bootstrap](https://getbootstrap.com/)**<br/>
+  The project uses the Bootstrap framework to help create some elements
+- **[FontAwesome](https://fontawesome.com/)**<br/>
+  The project uses FonAwesome to use an icons from the library.
+- **[Google Fonts](https://fonts.google.com/)**<br/>
+  The project uses Google fonts to style the website fonts.
+- **[GitHub](https://github.com/)**<br/>
+  To store and share all project code remotely.
+- **[Google Chrome - Dev Tools]()**<br/>
+  The project used Google Chrome Dev Tools to debug code. Check responsiveness.
+- **[Favicon generator](https://favicon.io/)**<br/>
+  The project uses Favicon generator to create a puzzle favicon
+- **[Google](https://www.google.com)**<br/>
+  Recipes for the project were found by using Google search.
+- **[Color Hex Color Codes](https://www.color-hex.com/)**<br/>
+  To chooise colors and take a code for the project
 
-  --------------------------------------------------------------------------
- ## [Testing](#testing)
+---
 
-   
- ------------------------------------------------------------------------------
- ## [Deployment](#deployment)
+## [Testing](#testing)
+
+# Automated Testing
+
+### Validation services
+
+Services used to check the validity of the code:
+
+[W3C Markup Validation used to validate HTML.](https://validator.w3.org/)<br>
+
+[W3C CSS validation used to validate CSS.](https://jigsaw.w3.org/css-validator/)<br>
+
+---
+
+# Manual testing
+
+Information about all manual testing that has been done
+to make sure all areas of the website are working as expected.
+
+Browsers: **Google; Opera; Firefox ; Microsoft Edge.**
+
+Browser width
+
+xs = Extra small <576px
+
+sm = Small ≥576px
+
+md = Medium ≥768px
+
+lg = Large ≥992px
+
+xl = Extra large ≥1200px
+
+|         | XS  | SM  | MD  | LG  | XL  |
+| ------- | --- | --- | --- | --- | --- |
+| Google  | Ok  | Ok  | Ok  | Ok  | Ok  |
+| Firefox | Ok  | Ok  | Ok  | Ok  | Ok  |
+| Opera   | Ok  | Ok  | Ok  | Ok  | Ok  |
+| ME      | Ok  | Ok  | Ok  | Ok  | Ok  |
+
+In each browser in each size were tested :
+
+Web page :
+
+- Open/Close .
+- Switch between navigation bar links.
+- Refresh.
+- Resize with browser window.
+- Responsiveness with dev tools
+
+Design :
+
+- Colors.
+- Text
+- Fonts
+- Images
+
+Layout :
+
+- Bootstrap Grid Layout.
+
+Website functionality:
+
+- Loading of Images
+- Loading of Links from database
+- Loading of text from the database
+- Open a close recipe card.
+- The functionality of forms:
+  create recipe
+  edit recipe
+- Delete recipe
+- All buttons are working
+- A modal window is working
+
+------------------------------------------------------------------------
+
+# Problems discovered
+
+1.  **Problems with closing the very first recipe card as soon as other opens:**
+
+    - **Problem:** <br>
+      The accordion element in the first recipe closing as soon as the user opens any other recipe.
+      It not happening in other cases.
+      All other recipes stay open.
+      To keep very first open, users have to open it again as soon as other recipes open.
+
+    - **Solution:** <br>
+
+2)  **Categories of recipes flashing white :**
+
+    **Problem** <br>
+    Categories of recipes flashing white, if to fast keep switching between them very fast.
+
+    - **Solution:** <br>
+
+    No special solution found. It happens only if switch to fast. What users did by checking the functionality of the website.
+
+# Real-Time Testing.
+
+Asked my friends and family to check the website on their devices.
+Go through the collection of recipes, open/close recipe cards. Despite many times. Press all buttons.
+Move through the navigation bar menu back and forward. Resize screen. Use forms to add/edit the recipe. Delete recipe.
+**Feed back**.
+
+The website was checked on different mobile devices and desktops.
+Everything working apart from problems which were in the description above.
 
 
- ## [Acknowledgments](#acknowledgments)
+---
 
- * Text within this project was written by the developer.
+## [Deployment](#deployment)
 
- * Project idea and design were created by the developer
+## [Acknowledgments](#acknowledgments)
 
- * The HTML and CSS code was written by the developer
-   Code taken from Bootstrap or other sorses - marked by comments
+- Text within this project was written by the developer.
 
+- Project idea and design were created by the developer
 
-  **Special thanks to:**
+- The HTML and CSS code was written by the developer
+  Code taken from Bootstrap or other sorses - marked by comments
 
-   Code Institute Mentor Spencer Barriball for his help and support.
-   Code Institute Tutor support 
-   Code Institute Slack Community for the shared experience.
+**Special thanks to:**
 
- ## [Disclaimer](#disclamer)
+Code Institute Mentor Spencer Barriball for his help and support.
+Code Institute Tutor support
+Code Institute Slack Community for the shared experience.
 
- The "Blend It" project is created for educational purposes only.
+## [Disclaimer](#disclamer)
+
+The "Blend It" project is created for educational purposes only.
