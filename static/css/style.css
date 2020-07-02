@@ -12,6 +12,7 @@ body {
 }
 .container {
   width: 90%;
+  height: 100%vw;
 }
 
 .navbar-brand {

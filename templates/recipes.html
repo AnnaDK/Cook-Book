@@ -64,7 +64,7 @@
         </div>
         <div class="modal-footer">
           <form action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" method="POST">
-            <button type="button" class="btn btn-success" href="{{ url_for('get_recipes') }}" data-dismiss="modal">
+            <button type="button" class="btn btn-success" href="{{ get_recipes}}" data-dismiss="modal">
               No, I don't want
             </button>
             <button type="submit" class="btn btn-danger btn-link" value="Submit">
@@ -92,7 +92,7 @@
 
       {% else %}
       <li class="page-item">
-        <a class="page-link" href="{{ url_for('get_recipes', page=pagenum) }}">{{ pagenum }}</a>
+        <a class="page-link" href="{{ url_for(request.endpoint, page=pagenum) }}">{{ pagenum }}</a>
       </li>
 
       {% endif %} {% endfor %}
