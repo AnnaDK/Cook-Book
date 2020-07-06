@@ -83,10 +83,10 @@
 
 ### [Wireframes](#wireframes)
 
-The wireframes were created using pen and paper.<br>
+The wireframes were created using [Balsamiq](https://balsamiq.com/)<br>
 Changes in design and functionality of the website which added in the process:<br>
-  1.Footer<br>
-  2.Pagination<br>
+  1. Footer<br>
+  2. Pagination<br>
   3. The idea of each list element of recipe opening separately after been tasted by users was changed.
   In the final version, full recipe information opens in one list element.<br>
   4. Buttons 'Edit recipe' and 'Delete recipe' added.<br>
@@ -94,10 +94,10 @@ Changes in design and functionality of the website which added in the process:<b
   6. Page 'Choice your Blender' created. List of Blenders. Same cards as for recipe. No accordion element.
      Button which brings the user to the actual webshop.
 
-Web site design 'Home' page [here](static/images/wireframes_images/home_page.jpg)<br>
-Web site design 'Recipes' page [here](static/images/wireframes_images/recipes_page.jpg)<br>
-Web site design  mobile display [here](static/images/wireframes_images/mobile_version.jpg)<br>
-Web site design 'Add recipe'[here](static/images/wireframes_images/add_recipe.jpg)<br>
+Web site design 'Home' page [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/home_page.png)<br>
+Web site design 'Recipes' page [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/add_recipe.png)<br>
+Web site design  mobile display [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/mobile.png)<br>
+Web site design 'Add recipe'[here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/recipes.png)<br>
 ---
 
 ## [Features](#features)
