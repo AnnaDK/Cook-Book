@@ -95,9 +95,9 @@ Changes in design and functionality of the website which added in the process:<b
      Button which brings the user to the actual webshop.
 
 Web site design 'Home' page [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/home_page.png)<br>
-Web site design 'Recipes' page [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/add_recipe.png)<br>
+Web site design 'Recipes' page [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/recipes.png)<br>
 Web site design  mobile display [here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/mobile.png)<br>
-Web site design 'Add recipe'[here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/recipes.png)<br>
+Web site design 'Add recipe'[here](https://github.com/AnnaDK/Cook-Book/blob/master/static/images/wireframes/add_recipe.png)<br>
 ---
 
 ## [Features](#features)
