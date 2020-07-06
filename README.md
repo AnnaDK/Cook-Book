@@ -6,7 +6,7 @@
 
 # **BLEND IT**
 
-"Blend It" is a website with a collection of smoothies recipes. It has a choice of recipes in three different categories, the possibility to add, edit, or delete a recipe, intuitive design, and list of recommended blenders.
+"Blend It" is a website with a collection of smoothies recipes. It has a choice of recipes in four different categories, the possibility to add, edit, or delete a recipe, intuitive design, and list of recommended blenders.
 
 ## [Click To visit "Blend It" !](https://smoothie-cookbook.herokuapp.com/)
 
@@ -18,7 +18,7 @@
 
 - **[Project Goals](#project-goals)**
 - **[User Goals](#user-goals)**
-- **[Site Owner's Goals](#site-owner's-goals)**
+- **[Site owner's goal](#owner-goals)**
 - **[Developer Goals](#developer-goals)**
 - **[Wireframes](#wireframes)**
 
@@ -65,7 +65,7 @@
 - Recipes split into three most popular categories of smoothies. Very comfortable and easy to switch between categories.
 - The functionality of adding, editing, and deleting recipes has easy access and made in a simple and understandable manner.
 
-### [Site Owner's goals](#site-owner's-goals)
+### [Site owner's goal](#owner-goals)
 
 - Promote a brand of cooking tools.
 
