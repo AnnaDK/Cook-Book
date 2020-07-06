@@ -71,7 +71,7 @@
 
   "Blend It" met these goals:
 
-- Website share a collection of blenders. Collection include: image, specifications and straight link to the web-shop.
+- The website shares a collection of blenders. The collection includes images, specifications, and straight links to the web-shop.
 
 ### [Developer Goals](#developer-goals)
 
@@ -168,28 +168,13 @@ Displaying a collection of blenders.<br>
 Each card has an image, blender details and link to the web-shop.
 
 <p align="center">
-   <img width="500" height="" src="static/images/images_for_readme/">
+   <img src="static/images/images_for_readme/website.png">
  </p>
-  
-  #### Mobile devices display
-
-  <p align="center">
-  <img width="150"  m-5 height="" src="static/images/images_for_readme/">
-   <img width="150" pl-2 height="" src="static/images/images_for_readme/">
-   <img width="150" p-2 height="" src="static/images/images_for_readme/">
-   <img width="150" p-2 height="" src="static/images/images_for_readme/">
- </p>
-   
-#### Tablet display
-
-  <p align="center">
-  <img width="200" height="" src="static/images/images_for_readme/">
-  </p>
 
 ### [Features Left to Implement](#features-left-to-implement)
 
 - Add an authorization. Create a registration form.
-  Make permition only for registered users: add, edit or delete recipes.
+  Make permission  only for registered users: add, edit or delete recipes.
   (Was not in requirements from CI for the current project )
 
 - Create a search by ingredients.
@@ -321,7 +306,7 @@ Website functionality:
       To keep very first open, users have to open it again as soon as other recipes open.
 
     - **Solution:** <br>
-     No, fail to appear in the dev tool. Couldn't find any solution to solve this bug.
+     No, fail to appear in the dev tool. Couldn't find any solution to solve this bug. 
      
 2)  **Categories of recipes flashing white :**
 
@@ -332,7 +317,9 @@ Website functionality:
     
     No special solution found. It happens only if switch to fast. What users did by checking the functionality of the website.
 
-# Real-Time Testing.
+
+
+# Real-Time Testing
 
 Asked my friends and family to check the website on their devices.
 Go through the collection of recipes, open/close recipe cards. Repeat many times. Press all buttons.
@@ -347,14 +334,66 @@ Everything working apart from problems which were in the description above.
 
 ## [Deployment](#deployment)
 
-The website was codded on GtPod.
+**To run this project  locally**
+
+You need an IDE <br>
+An account at [MongoDB Atlas](https://docs.atlas.mongodb.com/)<br>
+And following must be installed :<br>
+PIP<br>
+Python 3<br>
+Git<br>
+
+Directions:<br>
+Clone this repository directly into the editor. <br>
+Past this command into the terminal:<br>
+git clone https://github.com/AnnaDK/Cook-Book <br>
+Or click the green button "Clone or download", <br>
+"Download Zip" button, <br>
+Extract the Zip file.<br>
+python3 and pip must be installed <br>
+run $ pip install -r requirements.txt  <br>
+Create a database on MongoDB 
+In the database create following collections:
+* recipes
+* categories
+* blenders
+
+**recipes:**<br>
+_id: <ObjectId><br>
+recipe_name:<String><br>
+category_name:<String><br>
+ingredients:<String><br>
+instruction:<String><br>
+recipe_image:<String><br>
+source:<String><br>
+
+**categories:**<br>
+_id:<ObjectId><br>
+category_name:<String><br>
+
+**blenders:**
+_id:<ObjectId><br>
+blender_image:<String><br>
+blender_name:<String><br>
+blender_price:<String><br>
+shop_link:<String><br>
+parameters:<String><br>
+
+Set the connection to your MongoDB database(MONGO_URI) and a SECRET_KEY with the following syntax: os.environ["SECRET_KEY"] = "YourSecretKey"
+os.environ["MONGO_URI"] = "YourMongoURI"
+
+You will now be able to run the application using the following command python3 run.py.
+
+--------------------------------------------------------------------
+The website was codded on GitPod.
 
 - Open account on GitHub.
 - Create a project repository using the CI full template.
 - Use the Gitpod extension to open a working-space.
 - Commits were done through Gitpod.
 
-**To deploy the project, the following method was used.**
+**To deploy the project, the following method was used:**<br>
+
 Log in on Heroku.<br>
 Create a new app on the Heroku website by clicking the "New" button in your dashboard.<br>
 Give it a name "smoothie-cookbook" and set Europe as region.<br>
@@ -378,19 +417,20 @@ Click "Deploy Branch".
 ## [Acknowledgments](#acknowledgments)
 
 - Text within this project was written by the developer.
-
+- Text on 'Home' page taken from [Philips webshop](https://www.philips.co.uk/)
+- All recipes images as wel as information was taken from different websites. Links provided it the recipes.
 - Project idea and design were created by the developer
 
 - The HTML and CSS code was written by the developer
-  Code taken from Bootstrap or other sorses - marked by comments.
+  Code taken from Bootstrap or other sourses - marked by comments.
 
 - Code Institute lessons from " Data-Centric Development" and "Practical Python" modules were used as the main reference in the process of creating this project.
 
 
 **Special thanks to:**
 
-Code Institute Mentor Spencer Barriball for his help in this project and support.
-Code Institute Tutor Xavier
+Code Institute Mentor Spencer Barriball for his help in this project and support.<br>
+Code Institute Tutor support. Special thanks to CI tutor Xavier<br>
 Code Institute Slack Community for the shared experience.
 
 ## [Disclaimer](#disclamer)
